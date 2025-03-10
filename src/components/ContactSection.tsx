@@ -41,31 +41,30 @@ export function ContactSection() {
       </h2>
       
       <div className="max-w-2xl mx-auto text-center mt-8">
-        <p className={`text-slate dark:text-slate-light text-lg ${isVisible ? 'opacity-100 animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-          Whether you have a question, opportunity, or just want to connect, 
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        <p className={`text-slate dark:text-slate-light text-base ${isVisible ? 'opacity-100 animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+          Whether you have a question or opportunity, feel free to reach out.
         </p>
         
-        <div className={`mt-10 grid md:grid-cols-3 gap-6 ${isVisible ? 'opacity-100 animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+        <div className={`mt-8 grid md:grid-cols-3 gap-4 ${isVisible ? 'opacity-100 animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
           <a 
             href="mailto:cedrickjulian2122@gmail.com" 
-            className="bg-white dark:bg-navy-light p-6 rounded-lg shadow-sm border border-gray-100 dark:border-navy hover:border-teal dark:hover:border-teal transition-colors group"
+            className="bg-white dark:bg-navy-light p-4 rounded-lg shadow-sm border border-gray-100 dark:border-navy hover:border-blue dark:hover:border-blue transition-colors group"
           >
             <div className="flex flex-col items-center">
-              <Mail className="text-teal mb-3 h-8 w-8 group-hover:scale-110 transition-transform" />
-              <h3 className="text-navy dark:text-white font-medium">Email</h3>
-              <p className="text-slate text-sm mt-2 break-all">cedrickjulian2122@gmail.com</p>
+              <Mail className="text-blue mb-2 h-6 w-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-navy dark:text-white font-medium text-sm">Email</h3>
+              <p className="text-slate text-xs mt-1 break-all">cedrickjulian2122@gmail.com</p>
             </div>
           </a>
           
           <a 
             href="tel:+639552192028" 
-            className="bg-white dark:bg-navy-light p-6 rounded-lg shadow-sm border border-gray-100 dark:border-navy hover:border-teal dark:hover:border-teal transition-colors group"
+            className="bg-white dark:bg-navy-light p-4 rounded-lg shadow-sm border border-gray-100 dark:border-navy hover:border-blue dark:hover:border-blue transition-colors group"
           >
             <div className="flex flex-col items-center">
-              <Phone className="text-teal mb-3 h-8 w-8 group-hover:scale-110 transition-transform" />
-              <h3 className="text-navy dark:text-white font-medium">Phone</h3>
-              <p className="text-slate text-sm mt-2">0955-219-2028</p>
+              <Phone className="text-blue mb-2 h-6 w-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-navy dark:text-white font-medium text-sm">Phone</h3>
+              <p className="text-slate text-xs mt-1">0955-219-2028</p>
             </div>
           </a>
           
@@ -73,23 +72,23 @@ export function ContactSection() {
             href="https://www.linkedin.com/in/cedrick-julian-1b2082163" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-white dark:bg-navy-light p-6 rounded-lg shadow-sm border border-gray-100 dark:border-navy hover:border-teal dark:hover:border-teal transition-colors group"
+            className="bg-white dark:bg-navy-light p-4 rounded-lg shadow-sm border border-gray-100 dark:border-navy hover:border-blue dark:hover:border-blue transition-colors group"
           >
             <div className="flex flex-col items-center">
-              <Linkedin className="text-teal mb-3 h-8 w-8 group-hover:scale-110 transition-transform" />
-              <h3 className="text-navy dark:text-white font-medium">LinkedIn</h3>
-              <p className="text-slate text-sm mt-2 flex items-center">
-                Connect with me 
+              <Linkedin className="text-blue mb-2 h-6 w-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-navy dark:text-white font-medium text-sm">LinkedIn</h3>
+              <p className="text-slate text-xs mt-1 flex items-center">
+                Connect
                 <ArrowUpRight className="ml-1 h-3 w-3" />
               </p>
             </div>
           </a>
         </div>
         
-        <div className={`mt-16 ${isVisible ? 'opacity-100 animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+        <div className={`mt-10 ${isVisible ? 'opacity-100 animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
           <a
             href="mailto:cedrickjulian2122@gmail.com"
-            className="bg-teal text-navy px-8 py-4 rounded font-semibold hover:bg-teal/90 transition-colors duration-300"
+            className="bg-blue text-white px-6 py-3 rounded font-medium hover:bg-blue-dark transition-colors duration-300 text-sm"
           >
             Say Hello
           </a>

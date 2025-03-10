@@ -33,28 +33,27 @@ export function Navbar() {
       className={cn(
         "fixed w-full top-0 z-50 transition-all duration-300",
         scrolled 
-          ? "bg-white/90 dark:bg-navy/90 backdrop-blur border-b shadow-sm" 
+          ? "bg-white/90 dark:bg-navy/90 backdrop-blur border-b" 
           : "bg-transparent"
       )}
     >
-      <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-8">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3 md:px-8 max-w-5xl">
         <a 
           href="#" 
-          className="font-bold text-2xl text-navy dark:text-white font-poppins hover:text-teal dark:hover:text-teal transition-colors duration-300"
+          className="font-medium text-lg text-navy dark:text-white font-poppins hover:text-blue dark:hover:text-blue transition-colors duration-300"
         >
           CJ
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex items-center space-x-8">
-            {navItems.map((item, index) => (
+          <ul className="flex items-center space-x-6">
+            {navItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="text-slate-dark dark:text-slate-light hover:text-teal dark:hover:text-teal font-medium transition-colors duration-300"
+                  className="text-slate-dark dark:text-slate-light hover:text-blue dark:hover:text-blue font-medium transition-colors duration-300 text-sm"
                 >
-                  <span className="text-teal mr-1">{index + 1}.</span>
                   {item.name}
                 </a>
               </li>
@@ -64,7 +63,7 @@ export function Navbar() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-teal text-teal px-4 py-2 rounded hover:bg-teal/10 transition-colors duration-300"
+                className="border border-blue text-blue px-3 py-1.5 rounded hover:bg-blue/5 transition-colors duration-300 text-sm"
               >
                 Resume
               </a>
@@ -78,7 +77,7 @@ export function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
@@ -89,15 +88,14 @@ export function Navbar() {
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
-        <nav className="flex flex-col items-center justify-center space-y-8">
-          {navItems.map((item, index) => (
+        <nav className="flex flex-col items-center justify-center space-y-6">
+          {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-slate-dark dark:text-slate-light text-xl hover:text-teal dark:hover:text-teal font-medium transition-colors duration-300"
+              className="text-slate-dark dark:text-slate-light text-lg hover:text-blue dark:hover:text-blue font-medium transition-colors duration-300"
               onClick={() => setIsOpen(false)}
             >
-              <span className="text-teal mr-1">{index + 1}.</span>
               {item.name}
             </a>
           ))}
@@ -105,7 +103,7 @@ export function Navbar() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-teal text-teal px-6 py-3 rounded text-lg hover:bg-teal/10 transition-colors duration-300 mt-4"
+            className="border border-blue text-blue px-4 py-2 rounded text-base hover:bg-blue/5 transition-colors duration-300 mt-2"
             onClick={() => setIsOpen(false)}
           >
             Resume

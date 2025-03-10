@@ -10,8 +10,7 @@ const experiences = [
     description: [
       "Lead and mentor developers, providing technical expertise in web development technologies.",
       "Collaborate with design, UX/UI, and cross-functional teams to build scalable and visually appealing web solutions.",
-      "Plan and execute pre/post-deployment strategies, ensuring smooth rollouts with minimal downtime.",
-      "Participate in management meetings to align development timelines and support technical issue resolution across departments."
+      "Plan and execute pre/post-deployment strategies, ensuring smooth rollouts with minimal downtime."
     ]
   },
   {
@@ -21,8 +20,7 @@ const experiences = [
     location: "Quezon City, Philippines",
     description: [
       "Developed and maintained Automart.PH Admin 3.0 Dashboard, Motomart.PH Admin 3.0 Dashboard, and Assetmart.Global.",
-      "Engineered Qmarketz Installment Core and Installment Admin Dashboard backend systems.",
-      "Managed web application deployments on cloud platforms, ensuring system reliability and performance."
+      "Engineered Qmarketz Installment Core and Installment Admin Dashboard backend systems."
     ]
   },
   {
@@ -41,8 +39,7 @@ const experiences = [
     location: "Contract",
     description: [
       "Led IBM Cast Iron development for Ayala Land projects.",
-      "Developed Robotic Process Automation (RPA) for banking and payment collection systems.",
-      "Contributed to Electronic Know Your Client (EKYC) Phase 2 implementation."
+      "Developed Robotic Process Automation (RPA) for banking and payment collection systems."
     ]
   },
   {
@@ -50,18 +47,8 @@ const experiences = [
     title: "Digital Business Automation Developer",
     company: "I-Asiatic Innovations Phils., Inc.",
     description: [
-      "Developed and implemented Automation Anywhere RPA solutions for banking operations, including Account Opening and Reports Reconciliation.",
-      "Built automation workflows in UiPath for Retail Sales Management.",
-      "Integrated IBM WebSphere Portal solutions for Bangko Sentral ng Pilipinas (BSP)."
-    ]
-  },
-  {
-    date: "Nov 2017 – Nov 2018",
-    title: "Middleware Developer",
-    company: "I-Asiatic Innovations Phils., Inc.",
-    description: [
-      "Developed IBM Cast Iron integrations for Ayala Land's My eSas Treasury Management and Multi SAP Instance modules.",
-      "Implemented Customer Experience Engine (CXE) for Meralco."
+      "Developed and implemented Automation Anywhere RPA solutions for banking operations.",
+      "Built automation workflows in UiPath for Retail Sales Management."
     ]
   }
 ];
@@ -98,17 +85,17 @@ export function ExperienceSection() {
     <section
       id="experience"
       ref={sectionRef}
-      className="section-container bg-gray-50 dark:bg-navy-light"
+      className="section-container"
     >
       <h2 className={`section-title ${isVisible ? 'opacity-100 animate-fade-in-up' : 'opacity-0'}`}>
         Work Experience
       </h2>
       
-      <div className="mt-10 relative">
+      <div className="mt-8 relative">
         {/* Timeline line */}
         <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-slate/20 transform md:-translate-x-px"></div>
         
-        <div className="space-y-12">
+        <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div 
               key={index}
@@ -116,15 +103,15 @@ export function ExperienceSection() {
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
               {/* Timeline dot */}
-              <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 bg-teal rounded-full transform -translate-x-1/2 z-10"></div>
+              <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-blue rounded-full transform -translate-x-1.5 z-10"></div>
               
-              <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:ml-auto' : 'md:pl-12'}`}>
-                <div className="bg-white dark:bg-navy-dark p-6 rounded-lg shadow-sm border border-gray-100 dark:border-navy">
+              <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:ml-auto' : 'md:pl-8'}`}>
+                <div className="bg-white dark:bg-navy-dark p-4 rounded-lg border border-gray-100 dark:border-navy">
                   <div className="experience-date">{exp.date}</div>
                   <h3 className="experience-title">{exp.title}</h3>
                   <div className="experience-company">{exp.company}</div>
-                  {exp.location && <div className="text-sm text-slate mb-3">📍 {exp.location}</div>}
-                  <ul className="mt-3 space-y-2">
+                  {exp.location && <div className="text-xs text-slate mb-2">📍 {exp.location}</div>}
+                  <ul className="mt-2 space-y-1.5">
                     {exp.description.map((item, i) => (
                       <li key={i} className="experience-description">
                         {item}

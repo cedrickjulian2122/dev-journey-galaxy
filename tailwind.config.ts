@@ -67,7 +67,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Portfolio theme colors
+				// Portfolio theme colors - changed teal to soft blue
 				navy: {
 					light: '#172a45',
 					DEFAULT: '#0a192f',
@@ -78,10 +78,10 @@ export default {
 					DEFAULT: '#8892b0',
 					dark: '#495670',
 				},
-				teal: {
-					light: '#64ffda',
-					DEFAULT: '#64ffda',
-					dark: '#349780',
+				blue: {
+					light: '#D3E4FD',
+					DEFAULT: '#7EB6FF',
+					dark: '#5B8AD8',
 				},
 			},
 			borderRadius: {

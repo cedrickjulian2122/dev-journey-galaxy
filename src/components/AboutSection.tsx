@@ -56,8 +56,8 @@ export function AboutSection() {
           <div className="relative w-full max-w-xs mx-auto">
             <div className="relative z-10 overflow-hidden rounded-md bg-blue/10">
               <img 
-                src="https://media.licdn.com/dms/image/D5603AQEBhMRRSv5YSA/profile-displayphoto-shrink_800_800/0/1707733066894?e=1715212800&v=beta&t=1UJEw7gIkQ3yl1CnmEJYhKFXyMN4O_dEwUzkNm81cUI" 
-                alt="Cedrick Julian" 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                alt="Developer coding" 
                 className="rounded-md grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105"
               />
             </div>

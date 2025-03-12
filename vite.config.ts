@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "./", // Changed to relative path for GitHub Pages
+  base: "./", // Relative path for GitHub Pages
   plugins: [
     react(),
     mode === 'development' &&

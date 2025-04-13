@@ -1,8 +1,22 @@
-
 import { ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function HeroSection() {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+      
+      window.history.pushState(null, '', href);
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-16">
       <div className="container mx-auto px-4 md:px-8 flex flex-col items-start justify-center max-w-4xl">
@@ -22,6 +36,7 @@ export function HeroSection() {
         <div className="mt-8 opacity-0 animate-fade-in" style={{ animationDelay: '1s' }}>
           <a
             href="#about"
+            onClick={(e) => handleNavClick(e, '#about')}
             className="border border-blue text-blue px-5 py-3 rounded hover:bg-blue/5 transition-colors duration-300 inline-flex items-center text-sm"
           >
             About me
@@ -30,7 +45,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Background elements - simplified */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>
         <ArrowDown className="text-blue mt-2 animate-bounce h-4 w-4" />
       </div>

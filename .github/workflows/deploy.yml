@@ -1,4 +1,3 @@
-
 name: Deploy to GitHub Pages
 
 on:
@@ -10,16 +9,20 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
+  packages: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      
+        uses: actions/checkout@v3 # v3.6.0
+        with:
+          fetch-depth: 1
+
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3 # v3.8.1
         with:
           node-version: 18
           cache: 'npm'
@@ -32,9 +35,9 @@ jobs:
       
       - name: Create .nojekyll file
         run: touch ./dist/.nojekyll
-      
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@9c58c9e3bba1076ac378e07513fa2a293fdcf016 # v1.0.9
         with:
           path: ./dist
 
@@ -47,4 +50,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@a302f57b2e470ce947e71cf65a8d2220e3b6dcd9 # v1.2.5

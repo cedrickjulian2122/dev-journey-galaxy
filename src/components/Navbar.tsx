@@ -28,6 +28,26 @@ export function Navbar() {
     };
   }, [scrolled]);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      // Close the mobile menu if it's open
+      if (isOpen) setIsOpen(false);
+      
+      // Smooth scroll to the element
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+      
+      // Update URL without page reload
+      window.history.pushState(null, '', href);
+    }
+  };
+
   return (
     <header 
       className={cn(
@@ -52,6 +72,7 @@ export function Navbar() {
               <li key={item.name}>
                 <a
                   href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className="text-slate-dark dark:text-slate-light hover:text-blue dark:hover:text-blue font-medium transition-colors duration-300 text-sm"
                 >
                   {item.name}
@@ -94,7 +115,7 @@ export function Navbar() {
               key={item.name}
               href={item.href}
               className="text-slate-dark dark:text-slate-light text-lg hover:text-blue dark:hover:text-blue font-medium transition-colors duration-300"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.name}
             </a>
